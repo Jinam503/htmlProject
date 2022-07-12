@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>고양이 사전 만들기</title>
+        <link rel="stylesheet" href="5-14.css">
+        <style>
+            body{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+.searchbox{
+  width: 90%;
+  margin: 10px auto;
+}
+.header{
+  background: #ECDFBF;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+.header h1{
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.header h2{
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  margin-bottom: 8px;
+}
+#value{
+  border: none;
+  background: #E0D3B6;
+  padding: 6px;
+  font-size: 18px;
+  width: 80%;
+  border-radius: 6px;
+  color: white;
+}
+#value:focus{
+  outline: none;
+}
+.container{
+  background: #FFFFF5;
+  padding: 1%;
+}
+.item{
+  margin: 3% 0px;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 25px;
+  height: 25px;
+  background: #E0D3B6;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.name{
+  font-size: 17px;
+  font-weight: 470;
+  color: #333;
+}
+        </style>
+    </head>
+    <body>
+        <div class="searchbox">
+            <div class="header">
+              <h1>Cat Breeds Dictionary</h1>
+              <h2>Search</h2>
+              <input onkeyup="filter()" type="text" id="value" placeholder="Type to Search">
+            </div>
+      
+            <div class="container">
+                <div class="item">
+                    <span class="icon">A</span>
+                    <span class="name">Abyssinian</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">A</span>
+                    <span class="name">American Bobtail</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">A</span>
+                    <span class="name">American curl</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">A</span>
+                    <span class="name">American Shorthair</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">A</span>
+                    <span class="name">American Wirehair</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">T</span>
+                    <span class="name">Turkish Angora</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">B</span>
+                    <span class="name">Balinese</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">B</span>
+                    <span class="name">Bengal</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">R</span>
+                    <span class="name">Russian Blue</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">B</span>
+                    <span class="name">Bombay</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">P</span>
+                    <span class="name">Pixie Bob</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">Y</span>
+                    <span class="name">York Chocolate</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">T</span>
+                    <span class="name">Turkish Van</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">T</span>
+                    <span class="name">Tonkinese</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">S</span>
+                    <span class="name">Sphynx</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">S</span>
+                    <span class="name">Sokoke</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">B</span>
+                    <span class="name">British Shorthair</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">B</span>
+                    <span class="name">Burmese</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">B</span>
+                    <span class="name">Burmilla</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">C</span>
+                    <span class="name">Califirnia Spangled</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">C</span>
+                    <span class="name">Ceylon</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">C</span>
+                    <span class="name">Chartreux</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">N</span>
+                    <span class="name">Norwegian Forest</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">C</span>
+                    <span class="name">Cornish Rex</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">C</span>
+                    <span class="name">Cymric</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">D</span>
+                    <span class="name">Devon Rex</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">E</span>
+                    <span class="name">European Shorthair</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">E</span>
+                    <span class="name">Exotic Shorthair</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">G</span>
+                    <span class="name">German Rex</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">H</span>
+                    <span class="name">Havana brown</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">J</span>
+                    <span class="name">Japanese Bobtail</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">J</span>
+                    <span class="name">Javanese</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">K</span>
+                    <span class="name">Korat</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">L</span>
+                    <span class="name">La Perm</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">M</span>
+                    <span class="name">Maine Coon</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">M</span>
+                    <span class="name">Munchkin</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">P</span>
+                    <span class="name">Persian</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">R</span>
+                    <span class="name">Ragdoll</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">S</span>
+                    <span class="name">Scottish Fold</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">S</span>
+                    <span class="name">Scottishfold Straight</span>
+                  </div>
+                  <div class="item">
+                    <span class="icon">S</span>
+                    <span class="name">Siamese</span>
+                  </div>
+
+            </div>
+          </div>
+          <script type="text/javascript">
+            function filter(){
+      
+              var value, name, item, i;
+      
+              value = document.getElementById("value").value.toUpperCase();
+              item = document.getElementsByClassName("item");
+      
+              for(i=0;i<item.length;i++){
+                name = item[i].getElementsByClassName("name");
+                if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+                  item[i].style.display = "flex";
+                }else{
+                  item[i].style.display = "none";
+                }
+              }
+            }
+      </script>
+    </body>
+    
+</html>
